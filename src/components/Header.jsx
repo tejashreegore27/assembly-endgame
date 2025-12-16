@@ -11,10 +11,10 @@ export default function Header(){
     return (
         <header>
             <div className="game-title">
-                {title.split("").map(letter => <span className="key" style={style}>{letter}</span>)}
+                {title.split("").map((letter,index) => <span key={index} className="key" style={style}>{letter}</span>)}
             </div>
             <h3 className="tag-line">A Quest to Guess!</h3>
-            <p className="game-info">Find out the word in under 8 attempts</p>
+            <p className="game-info">Find out the word in under 10 attempts</p>
         </header>
     )
 }

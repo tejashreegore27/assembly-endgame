@@ -2,7 +2,8 @@ body{
   align-content: center;
   justify-items: center;
   background-color: #282726;
-
+  display: flex;
+  justify-content: center;
 }
 
 #root{
@@ -10,7 +11,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  width: 600px;
+  width: 500px;
   height: 730px;
   gap: 36px;
 }
@@ -28,7 +29,7 @@ header{
   font-size: 20px;
   color: #F9F4DA;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   margin-bottom: 10px;
 }
 
@@ -161,6 +162,7 @@ header{
   width: 200px;
   cursor: pointer;
   appearance: none;
+  background:#8e8e8e;
 }
 
 .difficulty-slider::-webkit-slider-thumb {
@@ -179,6 +181,19 @@ header{
   background: #11B5E5;
   cursor: pointer;
   border: none;
+}
+
+.difficulty-slider:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.difficulty-slider:disabled::-webkit-slider-thumb {
+  cursor: not-allowed;
+}
+
+.difficulty-slider:disabled::-moz-range-thumb {
+  cursor: not-allowed;
 }
 
 .chips-section{
@@ -238,8 +253,13 @@ header{
   border: 1px solid #D7D7D7;
 }
 
-.new-game-button{
-  width: 228px;
+.the-buttons{
+  display: flex;
+  gap: 20px;
+}
+
+.the-button{
+  width: 150px;
   height: 40px;
   background-color: #11B5E5;
   border-radius: 4px;

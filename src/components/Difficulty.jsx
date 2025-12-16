@@ -10,6 +10,7 @@ export default function Difficulty(props){
                     className="difficulty-slider"
                     min="0" max="2" value={props.difficulty}
                     onChange={(e) => props.setDifficulty(Number(e.target.value))}
+                    disabled={props.gameStarted}
             >
             </input>
         </section>
